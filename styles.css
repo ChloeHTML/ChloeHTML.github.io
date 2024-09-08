@@ -1,0 +1,311 @@
+/* Reset some default styles */
+body, h1, h2, p, label, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif; /* Default font for the body */
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background: #f1c40f; /* Yellow background */
+    color: #333;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Protest Guerrilla', sans-serif; /* Apply the new font to h1 only */
+    font-size: 3rem; /* Increase the font size */
+    line-height: 1.2; /* Adjust line-height for better spacing */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    font-family: 'Inconsolata', monospace; /* Apply the Inconsolata font to nav */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+}
+
+.blog-post {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for responsive design */
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.blog-text {
+    flex: 1;
+    margin-right: 1rem;
+    min-width: 300px; /* Ensure minimum width for text block */
+}
+
+.blog-text h2 {
+    font-family: 'Inconsolata', monospace; /* Apply Inconsolata font to h2 */
+    font-size: 2rem; /* Adjust as needed */
+    margin-bottom: 1rem;
+}
+
+.blog-text p {
+    margin-bottom: 1rem;
+}
+
+.blog-text .read-more {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #f1c40f; /* Yellow background */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.blog-text .read-more:hover {
+    background-color: #e1b12c; /* Darker yellow for hover effect */
+}
+
+.blog-image {
+    flex: 1;
+    max-width: 100%; /* Ensure image does not overflow */
+    margin-top: 1rem; /* Add margin for smaller screens */
+}
+
+.blog-image img {
+    width: 90%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* About Us Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 1.5rem; /* Space between the columns */
+    margin-top: 1.5rem;
+}
+
+.team-member {
+    text-align: center;
+    border: 2px solid #f1c40f; /* Yellow border around each member */
+    padding: 1rem;
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.team-member img {
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border: 3px solid #f1c40f; /* Yellow border around images */
+}
+
+.team-member h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    color: #f1c40f; /* Yellow color for names */
+    font-family: 'Inconsolata', monospace; /* Apply Inconsolata font */
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+}
+
+/* Additional Tutorial Section */
+#additional-tutorial {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border: 2px solid #f1c40f; /* Yellow border around the section */
+    border-radius: 8px;
+}
+
+#additional-tutorial h2 {
+    font-family: 'Inconsolata', monospace; /* Consistent font */
+    color: #f1c40f; /* Yellow color for the heading */
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.tutorial-item {
+    display: flex;
+    align-items: center; /* Center vertically */
+    gap: 1rem; /* Space between image and content */
+    border: 2px solid #f1c40f; /* Yellow border around the tutorial item */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.tutorial-item img {
+    width: 40%; /* Adjust width as needed */
+    height: auto;
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.tutorial-content {
+    padding: 1rem;
+    flex: 1; /* Take up remaining space */
+}
+
+.tutorial-content h3 {
+    font-family: 'Inconsolata', monospace; /* Consistent font for titles */
+    color: #f1c40f; /* Yellow color for titles */
+    margin-bottom: 0.5rem;
+}
+
+.tutorial-content p {
+    color: #555;
+}
+
+/* Hover effects */
+.tutorial-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tutorial-item {
+        flex-direction: column; /* Stack image and content on smaller screens */
+    }
+    
+    .tutorial-item img {
+        width: 100%; /* Full width on smaller screens */
+        height: auto;
+    }
+}
+
+/* Contact Us Section */
+#contact {
+    margin-top: 1.5rem; /* Reduced margin from the top */
+    padding: 1.5rem; /* Reduced padding inside the section */
+    background-color: #f9f9f9; 
+    border: 2px solid #f1c40f; 
+    border-radius: 8px;
+}
+
+#contact h2 {
+    font-family: 'Inconsolata', monospace; 
+    color: #f1c40f; 
+    margin-bottom: 0.75rem; /* Reduced bottom margin */
+    text-align: center;
+}
+
+#contact p {
+    margin-bottom: 1rem; /* Reduced margin */
+    text-align: center;
+    color: #333;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* Reduced gap between form elements */
+}
+
+label {
+    font-family: 'Inconsolata', monospace;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 0.25rem; /* Added margin to space labels from inputs */
+}
+
+input, textarea {
+    padding: 0.4rem; /* Reduced padding for inputs */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.95rem; /* Slightly reduced font size */
+    font-family: 'Inconsolata', monospace;
+    outline-color: #f1c40f;
+}
+
+input:focus, textarea:focus {
+    border-color: #f1c40f;
+    box-shadow: 0 0 3px rgba(241, 196, 15, 0.5); /* Reduced shadow size */
+}
+
+textarea {
+    resize: vertical; /* Allows vertical resize, keeping height manageable */
+    min-height: 60px; /* Minimum height set for comfort */
+}
+
+button {
+    padding: 0.6rem; /* Reduced padding on the button */
+    border: none;
+    background-color: #f1c40f;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Inconsolata', monospace;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e1b12c;
+}
+
+
+footer {
+    background: #f1c40f; /* Yellow background */
+    color: #333;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .blog-post {
+        flex-direction: column;
+    }
+    
+    .blog-text {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
